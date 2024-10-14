@@ -5,14 +5,20 @@ This script automates the process of transferring files to a reMarkable device.
 ## Prerequisites
 
 1. Your reMarkable device must be in developer mode. To enable this:
-   - Go to Settings > General > About
-   - Tap on "Copyright and licenses"
-   - Scroll to the bottom and tap on "General information"
-   - Tap 7 times on "GPLv3 Compliance"
+
+   - Go to Settings > Account > Advanced
+   - Enable Developer mode
+   - Your device will be factory resetted, so make sure you save your data in the cloud or somewhere else!
    - Go back to the main menu, scroll down, and enable "Developer mode"
 
 2. You need to know your device's IP address and password. Find these in:
-   Settings > Help > Copyrights and licenses
+
+   - Settings > About > Copyright and licenses
+   - Tap on "Copyright and licenses"
+   - Scroll to the bottom and tap on "General information"
+   - Tap on GPLv3 Compliance"
+   - Find your root password
+     Settings > Help > Copyrights and licenses
 
 3. Ensure you have SSH installed on your Linux machine.
 
@@ -30,11 +36,13 @@ This script automates the process of transferring files to a reMarkable device.
 1. Open a terminal and navigate to the directory containing the script.
 
 2. Run the script:
+
    ```
    ./remarkable_transfer.sh
    ```
 
 3. Follow the prompts:
+
    - Enter your reMarkable device's IP address (default is 10.11.99.1)
    - Enter your device's password
    - Enter the path to the file you want to transfer (default is "suspended.png" in the current directory)
@@ -54,6 +62,7 @@ This script automates the process of transferring files to a reMarkable device.
 ## Troubleshooting
 
 If you encounter any issues:
+
 - Ensure your reMarkable device is connected to the same network as your computer.
 - Double-check the IP address and password.
 - Make sure the file you're trying to transfer exists at the specified path.
