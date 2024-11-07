@@ -21,11 +21,13 @@ This script provides an interactive way to set up and configure the brightness s
 1. Open a terminal.
 
 2. Navigate to the directory containing the script:
+
    ```
    cd /path/to/script/directory
    ```
 
 3. Run the script with root privileges:
+
    ```
    sudo ./interactive_brightness_setup.sh
    ```
@@ -37,32 +39,49 @@ This script provides an interactive way to set up and configure the brightness s
 To make it easier to run the script in the future, you can create an alias:
 
 1. Open your `.bashrc` or `.bash_aliases` file in a text editor:
+
    ```
    nano ~/.bashrc
    ```
+
    or
+
    ```
    nano ~/.bash_aliases
    ```
 
 2. Add the following line at the end of the file:
+
    ```
    alias brightness-setup='sudo /path/to/interactive_brightness_setup.sh'
    ```
+
    Replace `/path/to/` with the actual path where you saved the script.
 
 3. Save the file and exit the editor.
 
 4. Reload your shell configuration:
+
    ```
    source ~/.bashrc
    ```
+
    or open a new terminal.
 
 5. Now you can run the script by simply typing:
    ```
    brightness-setup
    ```
+
+## One liner for when you are lazy
+
+You do not need to SSH first, the process will guide you through inputting the password.
+
+```
+scp /home/User/Downloads/suspended.png root@ID:/usr/share/remarkable/
+```
+
+I am assuming you have the image downloaded in Downloads.
 
 ## Caution
 
