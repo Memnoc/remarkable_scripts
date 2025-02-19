@@ -122,7 +122,7 @@ The script will prompt you for three options:
 
 ## 📜 License
 
-MIT © [Matteo Stara]
+MIT © [Matteo Stara](https://github.com/Memnoc/remarkable_scripts/blob/main/LICENSE)
 
 ---
 
