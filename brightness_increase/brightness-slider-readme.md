@@ -1,92 +1,129 @@
-# Interactive Brightness Slider Setup Script
+# 🌟 reMarkable Brightness Control - Script
 
-This script provides an interactive way to set up and configure the brightness slider on your Linux system. It allows you to set maximum brightness, enable linear mapping, create a systemd service for brightness control, and more.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub issues](https://img.shields.io/github/issues/yourusername/remarkable-brightness.svg)](https://github.com/yourusername/remarkable-brightness/issues)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/yourusername/remarkable-brightness/graphs/commit-activity)
+[![made-for-remarkable](https://img.shields.io/badge/Made%20for-reMarkable-blue.svg)](https://remarkable.com/)
 
-## Prerequisites
+> 💡 Enhance your reMarkable Paper Pro experience with customizable brightness controls
 
-- A Linux system
-- Root access (sudo privileges)
+## 📋 Table of Contents
 
-## Installation
+- [Features](#-features)
+- [Prerequisites](#-prerequisites)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Safety](#-safety)
+- [Troubleshooting](#-troubleshooting)
+- [Support](#-support)
 
-1. Save the script to a file named `interactive_brightness_setup.sh` in your desired directory.
+## ✨ Features
 
-2. Make the script executable:
+- 🔆 Maximum brightness configuration
+- 📊 Linear brightness mapping
+- 🔄 Persistent settings across reboots
+- ⚙️ System service integration
+
+## 🔧 Prerequisites
+
+- reMarkable Paper Pro tablet
+  - root credentials
+  - developer mode enabled
+- Computer with terminal access
+- Local network connection
+- Basic command line knowledge
+
+## 📥 Installation
+
+### Step 1: Enable SSH on reMarkable
+
+1. 📱 On your reMarkable tablet:
    ```
-   chmod +x interactive_brightness_setup.sh
+   Settings ➜ About ➜ Copyrights and licenses (grab your ssh passwords)
+   Settings ➜ Software ➜ Developer Mode(enable)
    ```
+2. 📝 Note down the IP address shown
 
-## Usage
+### Step 2: Transfer the Script
 
-1. Open a terminal.
+> ⚠️ **Important**: You'll need two terminal windows open:
+>
+> - Terminal 1: For SSH connection
+> - Terminal 2: For file transfer
 
-2. Navigate to the directory containing the script:
-
-   ```
-   cd /path/to/script/directory
-   ```
-
-3. Run the script with root privileges:
-
-   ```
-   sudo ./interactive_brightness_setup.sh
-   ```
-
-4. Follow the on-screen prompts. The script will ask for confirmation before each major step.
-
-## Creating an Alias (Optional)
-
-To make it easier to run the script in the future, you can create an alias:
-
-1. Open your `.bashrc` or `.bash_aliases` file in a text editor:
-
-   ```
-   nano ~/.bashrc
-   ```
-
-   or
-
-   ```
-   nano ~/.bash_aliases
-   ```
-
-2. Add the following line at the end of the file:
-
-   ```
-   alias brightness-setup='sudo /path/to/interactive_brightness_setup.sh'
-   ```
-
-   Replace `/path/to/` with the actual path where you saved the script.
-
-3. Save the file and exit the editor.
-
-4. Reload your shell configuration:
-
-   ```
-   source ~/.bashrc
+1. 💾 Save the script as `brightness.sh`
+2. 📂 Open Terminal 2 and navigate to script location
+3. 📤 Transfer to reMarkable:
+   ```bash
+   scp brightness.sh root@<your-remarkable-ip>:/home/root/
    ```
 
-   or open a new terminal.
+### Step 3: Execute the Script
 
-5. Now you can run the script by simply typing:
+1. 🔌 In Terminal 1, connect via SSH:
+
+   ```bash
+   ssh root@<your-remarkable-ip>
    ```
-   brightness-setup
+
+2. 🚀 Run the script:
+   ```bash
+   cd /home/root
+   chmod +x brightness.sh
+   ./brightness.sh
    ```
 
-## One liner for when you are lazy
+## 🎯 Usage
 
-You do not need to SSH first, the process will guide you through inputting the password.
+The script will prompt you for three options:
 
-```
-scp /home/User/Downloads/suspended.png root@ID:/usr/share/remarkable/
-```
+1. 🔆 **Brightness Settings**
 
-I am assuming you have the image downloaded in Downloads.
+   ```
+   Set maximum brightness and enable linear mapping
+   ```
 
-## Caution
+2. 💾 **System Configuration**
 
-This script requires root privileges and modifies system files and services. Always review scripts that require elevated privileges before running them. Use at your own risk.
+   ```
+   Remount /etc as read-write
+   ```
 
-## Support
+3. ⚙️ **Service Creation**
+   ```
+   Create and enable systemd service
+   ```
 
-If you encounter any issues or have questions, please open an issue in the repository or contact the script maintainer.
+## 🛡️ Safety Considerations
+
+- 🔐 Root access required
+- 📑 System-level modifications
+- 💾 Backup recommended
+- ↩️ Reversible via factory reset
+- ✅ Brightness-focused changes only
+
+## 🔍 Troubleshooting
+
+| Issue                | Solution                    |
+| -------------------- | --------------------------- |
+| 🔴 Connection Failed | Check network & IP          |
+| 🔴 Permission Denied | Verify SSH is enabled       |
+| 🔴 Script Error      | Check execution permissions |
+
+## 💬 Support
+
+- 📮 Open an issue for bug reports
+- 💡 Feature requests welcome
+- 🤝 Community contributions appreciated
+
+## 📜 License
+
+MIT © [Matteo Stara]
+
+---
+
+<div align="center">
+
+🌟 **Made with love for the reMarkable community** 🌟
+
+</div>
