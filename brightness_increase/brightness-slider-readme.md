@@ -7,6 +7,10 @@
 
 > 💡 Enhance your reMarkable Paper Pro experience with customizable brightness controls
 
+> ⚠️ **WARNING**
+
+> This hack is provided 'as-is' and without warranty. We assume no liability for any damage resulting from hardware modifications. This project is neither affiliated with nor endorsed by reMarkable AS. Modifying your device may void your warranty and official support may refuse to help you. Proceed at your own risk!
+
 ## 📋 Table of Contents
 
 - [Features](#-features)
